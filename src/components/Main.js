@@ -31,15 +31,15 @@ function Main(props) {
     <main className="content">
       <section className="profile">
         <img src={userAvatar} className="profile__image" alt="Портрет автора" />
-        <div className="header__pencil" onClick={props.onEditAvatar}></div>
+        <div className="header__pencil" onClick={props.onEditAvatar}/>
         <div className="profile-info">
           <div className="information">
             <h1 className="profile-info__title">{userName}</h1>
             <p className="profile-info__subtitle">{userDescription}</p>
           </div>
-          <button type="button" className="profile-info__button" aria-label="редактировать профиль" onClick={props.onEditProfile}></button>
+          <button type="button" className="profile-info__button" aria-label="редактировать профиль" onClick={props.onEditProfile}/>
         </div>
-        <button type="button" className="profile__add-button" aria-label="добавить фото" onClick={props.onAddPlace}></button>
+        <button type="button" className="profile__add-button" aria-label="добавить фото" onClick={props.onAddPlace}/>
       </section>
       <section className="cards">
         {cards.map((item, index) => {
