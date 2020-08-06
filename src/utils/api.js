@@ -53,7 +53,7 @@ class Api {
     return this._fetch(url, {
       method: 'POST',
       body: JSON.stringify({
-        name: `${data.title}`,
+        name: `${data.name}`,
         link: `${data.link}`
       })
     })
@@ -66,12 +66,18 @@ class Api {
     })
   }
 
-  //метод отправления лайка
-  sendLike(url) {
+  //метод добавления лайка
+  putLikeCard(url) {
     return this._fetch(url, {
       method: 'PUT'
     })
   }
+//метод удаления лайка
+deleteLikeCard(url) {
+  return this._fetch(url, {
+    method: 'DELETE'
+  })
+}
 
   ///метод изменения аватара
   changeAvatar(url, data) {
